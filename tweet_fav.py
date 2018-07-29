@@ -1,6 +1,7 @@
 import tweepy
 import json
 import time
+import os
 
 
 auth = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"],  os.environ["CONSUMER_SECRET"])
