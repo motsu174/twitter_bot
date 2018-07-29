@@ -2,6 +2,7 @@ import tweepy
 import json
 import time
 import os
+import random
 
 
 auth = tweepy.OAuthHandler(os.environ["CONSUMER_KEY"],  os.environ["CONSUMER_SECRET"])
@@ -10,7 +11,7 @@ auth.set_access_token(os.environ["ACCESS_TOKEN_KEY"], os.environ["ACCESS_TOKEN_S
 api = tweepy.API(auth)
 
 #調べる単語
-keyword = '米谷奈々未'
+keyword = random.choice(['米谷奈々未','よねみん'])
 params = {"q": keyword,'count':5}
 
 search_results = api.search(q=params['q'],count=params['count'])
