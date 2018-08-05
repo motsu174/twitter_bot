@@ -11,7 +11,7 @@ auth.set_access_token(os.environ["ACCESS_TOKEN_KEY"], os.environ["ACCESS_TOKEN_S
 api = tweepy.API(auth)
 
 #調べる単語
-keyword = random.choice(['米谷奈々未','よねみん'])
+keyword = random.choice(['米谷奈々未','佐藤詩織'])
 params = {"q": keyword,'count':5}
 
 search_results = api.search(q=params['q'],count=params['count'])
